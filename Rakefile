@@ -4,11 +4,11 @@ require 'rake/gempackagetask'
 
 Spec::Rake::SpecTask.new
 
-gem_spec = eval(IO.read(File.join(File.dirname(__FILE__), "aws-sdb.gemspec")))
+gem_spec = eval(IO.read(File.join(File.dirname(__FILE__), "aws-simpledb.gemspec")))
 
 desc "Open an irb session preloaded with this library"
 task :console do
-  sh "irb -rubygems -I lib -r aws_sdb.rb"
+  sh "irb -rubygems -I lib -r aws-simpledb.rb"
 end
 
 Rake::GemPackageTask.new(gem_spec) do |pkg|

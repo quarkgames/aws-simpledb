@@ -15,7 +15,7 @@ module AwsSdb
       @access_key_id = options[:access_key_id] || ENV['AMAZON_ACCESS_KEY_ID']
       @secret_access_key = options[:secret_access_key] || ENV['AMAZON_SECRET_ACCESS_KEY']
       @base_url = options[:url] || 'http://sdb.amazonaws.com'
-      @logger = options[:logger] || Logger.new("aws_sdb.log")
+      @logger = options[:logger] || Logger.new("aws-simpledb.log")
     end
 
     def list_domains(max = nil, token = nil)
