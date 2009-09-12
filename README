@@ -1,5 +1,10 @@
+== About
 Amazon SimpleDB
-
 Reworking this API to be up-to-date with the new APIs.
 
+== Commands
+sudo gem build aws-simpledb.gemspec
+sudo gem install aws-simpledb-0.1.0.gem
+
+== Notes
 THIS GEM IS NOT READY FOR USE
