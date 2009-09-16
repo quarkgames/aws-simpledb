@@ -1,20 +1,14 @@
 require 'rubygems'
-require 'spec/rake/spectask'
-require 'rake/gempackagetask'
+require 'rake'
+require 'echoe'
 
-Spec::Rake::SpecTask.new
-
-gem_spec = eval(IO.read(File.join(File.dirname(__FILE__), "aws-simpledb.gemspec")))
-
-desc "Open an irb session preloaded with this library"
-task :console do
-  sh "irb -rubygems -I lib -r aws-simpledb.rb"
+Echoe.new('aws-simpledb', '0.1.2') do |p|
+  p.description     = "This is an easy way to use Amazon SimpleDB"
+  p.url             = "http://github.com/charlesju/aws-simpledb"
+  p.author          = "Charles Ju"
+  p.email           = "charlesju@gmail.com"
+  p.ignore_pattern  = ["tmp/*", "script/*"]
+  p.development_dependencies = []
 end
 
-Rake::GemPackageTask.new(gem_spec) do |pkg|
-  pkg.gem_spec = gem_spec
-end
-
-task :install => [:package] do
-  sh %{sudo gem install pkg/#{gem_spec.name}-#{gem_spec.version}}
-end
+Dir["#{File.dirname(__FILE__)}/tasks/*.rake"].sort.each {|ext| load ext}
