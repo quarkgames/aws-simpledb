@@ -2,7 +2,7 @@ require 'rubygems'
 require 'rake'
 require 'echoe'
 
-Echoe.new('aws-simpledb', '0.1.2') do |p|
+Echoe.new('aws-simpledb', '0.1.3') do |p|
   p.description     = "This is an easy way to use Amazon SimpleDB"
   p.url             = "http://github.com/charlesju/aws-simpledb"
   p.author          = "Charles Ju"
