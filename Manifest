@@ -1,0 +1,10 @@
+LICENSE
+Manifest
+README
+Rakefile
+aws-simpledb.gemspec
+lib/aws-simpledb.rb
+lib/aws-simpledb/error.rb
+lib/aws-simpledb/service.rb
+spec/aws-simpledb/service_spec.rb
+spec/spec_helper.rb
